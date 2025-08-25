@@ -4,10 +4,10 @@ import fs from "fs";
 import readline from "readline";
 import chalk from "chalk";
 
-// & load in the questions from the JSON file &
+// & load in the questions from the JSON file
 const questions = JSON.parse(fs.readFileSync("./warhammer_questions.json"));
 
-// & keep track of scores for each faction &
+// & keep track of scores for each faction
 let scores = {
   Ork: 0,
   "Space Marine": 0,
@@ -20,7 +20,7 @@ let rl; // & readline will only be created after the intro finishes
 let current = 0; // & index of the current question
 let lastInvalid = false; // & track if the last input was invalid so we don’t reprint the question
 
-// & dummy function (noop) used to swallow input during the intro &
+// & dummy function (noop) used to swallow input during the intro
 const swallowInput = () => {};
 
 let escKeyHandler = null;
@@ -44,7 +44,7 @@ function cleanupAndExit() {
   process.exit(0);
 }
 
-// & lock input so typing during intro doesn’t interfere &
+// & lock input so typing during intro doesn’t interfere
 function lockInput() {
   try {
     if (process.stdin.isTTY) process.stdin.setRawMode(true);
@@ -61,7 +61,7 @@ function unlockInput() {
   } catch {}
 }
 
-// & slowly types out a string a character at a time &
+// & slowly types out a string a character at a time
 async function typeOut(text, delay = 35) {
   for (const char of text) {
     process.stdout.write(char);
@@ -70,7 +70,7 @@ async function typeOut(text, delay = 35) {
   process.stdout.write("\n");
 }
 
-// & prints the animated intro message, then sets up readline and starts quiz &
+// & prints the animated intro message, then sets up readline and starts quiz
 async function showIntro() {
   const intro =
     "\nThis is the Dawn of War\n" +
@@ -102,11 +102,11 @@ async function showIntro() {
   askQuestion();
 }
 
-// & handles asking the current question &
+// & handles asking the current question
 function askQuestion() {
   const q = questions[current];
 
-  // & only show the question again if last input wasn’t invalid &
+  // & only show the question again if last input wasn’t invalid
   if (!lastInvalid) {
     console.log(`\n${chalk.yellow(`Q${q.id}: ${q.question}`)}`);
     q.options.forEach((opt, i) => {
@@ -127,7 +127,7 @@ function askQuestion() {
         );
         lastInvalid = false;
 
-        // & move to the next question after a short pause &
+        // & move to the next question after a short pause
         setTimeout(() => {
           current++;
           if (current < questions.length) {
@@ -137,7 +137,7 @@ function askQuestion() {
           }
         }, 1000);
       } else {
-        // & if invalid, don’t reprint the question, just show error &
+        // & if invalid, don’t reprint the question, just show error
         lastInvalid = true;
         console.log(
           chalk.red(`Invalid choice. Please select 1–${q.options.length}.`)
@@ -148,7 +148,7 @@ function askQuestion() {
   );
 }
 
-// & show the final results at the end of the quiz &
+// & show the final results at the end of the quiz
 function showResults() {
   const quotes = {
     "Space Marine": "Burn the Heretic. Kill the Mutant. Purge the Unclean!",
@@ -175,7 +175,7 @@ function showResults() {
     resultText += `${faction}: ${percent}%\n`;
   });
 
-  // & find the faction with the highest score &
+  // & find the faction with the highest score
   const dominant = Object.entries(scores).reduce((a, b) =>
     a[1] > b[1] ? a : b
   )[0];
@@ -193,7 +193,7 @@ function showResults() {
   fs.writeFileSync("result.txt", resultText);
   console.log(chalk.gray("Results saved to result.txt"));
 
-  // & option to restart the quiz &
+  // & option to restart the quiz
   rl.question(
     chalk.blue("\nWould you like to play again? (y/n): "),
     (answer) => {
