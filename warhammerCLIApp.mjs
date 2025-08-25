@@ -135,7 +135,7 @@ function askQuestion() {
           } else {
             showResults();
           }
-        }, 0);
+        }, 500);
       } else {
         // & if invalid, don’t reprint the question, just show error
         lastInvalid = true;
