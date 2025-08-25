@@ -135,7 +135,7 @@ function askQuestion() {
           } else {
             showResults();
           }
-        }, 1000);
+        }, 0);
       } else {
         // & if invalid, don’t reprint the question, just show error
         lastInvalid = true;
@@ -185,7 +185,7 @@ function showResults() {
       dominant
     )}!`
   );
-  console.log(chalk.gray(`"${quotes[dominant]}"`));
+  console.log(chalk.red(`"${quotes[dominant]}"`));
   console.log("==============================\n");
 
   // & save results to file
@@ -195,7 +195,7 @@ function showResults() {
 
   // & option to restart the quiz
   rl.question(
-    chalk.blue("\nWould you like to play again? (y/n): "),
+    chalk.blue("\nWould you like to retake the questionaire? (y/n): "),
     (answer) => {
       if (answer.toLowerCase() === "y") {
         scores = {
@@ -209,7 +209,7 @@ function showResults() {
         lastInvalid = false;
         askQuestion();
       } else {
-        console.log(chalk.gray("Goodbye."));
+        console.log(chalk.gray("Good Luck."));
         cleanupAndExit();
       }
     }

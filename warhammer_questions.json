@@ -488,131 +488,128 @@
       }
     ]
   },
-
-  [
-    {
-      "id": 21,
-      "question": "How do you feel about the Space Marines?",
-      "options": [
-        {
-          "text": "Blind zealots clinging to a dead god.",
-          "category": "Chaos Marine"
-        },
-        {
-          "text": "Noble warriors and the finest of mankind.",
-          "category": "Space Marine"
-        },
-        {
-          "text": "They are inflexible, predictable — easily outmanoeuvred.",
-          "category": "Eldar"
-        },
-        {
-          "text": "Big ladz, but dey take fings' too serious.",
-          "category": "Ork"
-        },
-        {
-          "text": "Angels of the Imperium. I hope to die beside one.",
-          "category": "Imperial Guard"
-        }
-      ]
-    },
-    {
-      "id": 22,
-      "question": "How do you feel about the Chaos Marines?",
-      "options": [
-        {
-          "text": "Traitorous filth. They deserve only death.",
-          "category": "Space Marine"
-        },
-        {
-          "text": "They’ve embraced truth. Power matters more than loyalty.",
-          "category": "Chaos Marine"
-        },
-        {
-          "text": "Their chaos weakens the galaxy. They are reckless children.",
-          "category": "Eldar"
-        },
-        { "text": "Dey’s loud an’ smashy. I like dat!", "category": "Ork" },
-        {
-          "text": "I fear them. But I fight anyway.",
-          "category": "Imperial Guard"
-        }
-      ]
-    },
-    {
-      "id": 23,
-      "question": "How do you feel about the Orks?",
-      "options": [
-        {
-          "text": "The Green Tide is a formmiddable scourge upon the galaxy.",
-          "category": "Space Marine"
-        },
-        {
-          "text": "Their unsettling love for battle makes them the true winners of this war",
-          "category": "Eldar"
-        },
-        { "text": "We’z born fer fightin’ — nuff said!", "category": "Ork" },
-        {
-          "text": "Stupid beasts. Easy to corrupt or manipulate.",
-          "category": "Chaos Marine"
-        },
-        {
-          "text": "Their smell is the worst part",
-          "category": "Imperial Guard"
-        }
-      ]
-    },
-    {
-      "id": 24,
-      "question": "How do you feel about the Eldar?",
-      "options": [
-        {
-          "text": "Sneaky gitz hidin’ behind shiny trickz.",
-          "category": "Ork"
-        },
-        {
-          "text": "An untrustworthy ally, and an tricky foe.",
-          "category": "Space Marine"
-        },
-        {
-          "text": "Ancient, wise, and burdened with knowledge.",
-          "category": "Eldar"
-        },
-        {
-          "text": "Even the Dark Gods envy their power.",
-          "category": "Chaos Marine"
-        },
-        {
-          "text": "They saved a regiment once. We never saw them again.",
-          "category": "Imperial Guard"
-        }
-      ]
-    },
-    {
-      "id": 25,
-      "question": "How do you feel about the Imperial Guard?",
-      "options": [
-        {
-          "text": "Pathetic meat-shields with a life expectancy of minutes.",
-          "category": "Chaos Marine"
-        },
-        {
-          "text": "The backbone of the Imperium. Honour them.",
-          "category": "Space Marine"
-        },
-        {
-          "text": "Cannon fodder. Predictable, breakable.",
-          "category": "Eldar"
-        },
-        {
-          "text": "Deyz soft as squig, an’ slow as grots, but dey keep comin’",
-          "category": "Ork"
-        },
-        {
-          "text": "We are not the finest soldiers of the Imperium, but we are the ones who endure",
-          "category": "Imperial Guard"
-        }
-      ]
-    }
-  ]
+  {
+    "id": 21,
+    "question": "How do you feel about the Space Marines?",
+    "options": [
+      {
+        "text": "Blind zealots clinging to a dead god.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "Noble warriors and the finest of mankind.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "They are inflexible, predictable — easily outmanoeuvred.",
+        "category": "Eldar"
+      },
+      {
+        "text": "Big ladz, but dey take fings' too serious.",
+        "category": "Ork"
+      },
+      {
+        "text": "Angels of the Imperium. I hope to die beside one.",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "question": "How do you feel about the Chaos Marines?",
+    "options": [
+      {
+        "text": "Traitorous filth. They deserve only death.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "They’ve embraced truth. Power matters more than loyalty.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "Their chaos weakens the galaxy. They are reckless children.",
+        "category": "Eldar"
+      },
+      { "text": "Dey’s loud an’ smashy. I like dat!", "category": "Ork" },
+      {
+        "text": "I fear them. But I fight anyway.",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "question": "How do you feel about the Orks?",
+    "options": [
+      {
+        "text": "The Green Tide is a formmiddable scourge upon the galaxy.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "Their unsettling love for battle makes them the true winners of this war",
+        "category": "Eldar"
+      },
+      { "text": "We’z born fer fightin’ — nuff said!", "category": "Ork" },
+      {
+        "text": "Stupid beasts. Easy to corrupt or manipulate.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "Their smell is the worst part",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "question": "How do you feel about the Eldar?",
+    "options": [
+      {
+        "text": "Sneaky gitz hidin’ behind shiny trickz.",
+        "category": "Ork"
+      },
+      {
+        "text": "An untrustworthy ally, and an tricky foe.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "Ancient, wise, and burdened with knowledge.",
+        "category": "Eldar"
+      },
+      {
+        "text": "Even the Dark Gods envy their power.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "They saved a regiment once. We never saw them again.",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "question": "How do you feel about the Imperial Guard?",
+    "options": [
+      {
+        "text": "Pathetic meat-shields with a life expectancy of minutes.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "The backbone of the Imperium. Honour them.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "Cannon fodder. Predictable, breakable.",
+        "category": "Eldar"
+      },
+      {
+        "text": "Deyz soft as squig, an’ slow as grots, but dey keep comin’",
+        "category": "Ork"
+      },
+      {
+        "text": "We are not the finest soldiers of the Imperium, but we are the ones who endure",
+        "category": "Imperial Guard"
+      }
+    ]
+  }
 ]
