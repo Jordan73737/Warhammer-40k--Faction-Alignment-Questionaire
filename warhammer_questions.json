@@ -1,0 +1,618 @@
+[
+  {
+    "id": 1,
+    "question": "What is the purpose of battle",
+    "options": [
+      {
+        "text": "Ta see who’s da biggest an’ da stompiest!",
+        "category": "Ork"
+      },
+      {
+        "text": "To protect the Imperium, purge the heretic, and uphold the Emperor’s will with courage and discipline.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "To strike with precision and guide fate to our advantage.",
+        "category": "Eldar"
+      },
+      {
+        "text": "To instill fear, corrupt the weak, and seize power through any means.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "To serve the Emperor and defend humanity, no matter the cost.",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "You’re betrayed by a fellow comrade. How do you respond?",
+    "options": [
+      { "text": "Krump da git’s skull wiv me bare hands!", "category": "Ork" },
+      {
+        "text": "Escort them to command and follow orders",
+        "category": "Space Marine"
+      },
+      {
+        "text": "Sabotage their plans and dispose of them quickly.",
+        "category": "Eldar"
+      },
+      {
+        "text": "Capture and torture them for information before execution",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "Inform the Commissar - he will surely execute them",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Which unit do you aspire to be a part of?",
+    "options": [
+      {
+        "text": "I’d be one o’ da Meganobz — big, stompy, an’ proppa killy!",
+        "category": "Ork"
+      },
+      {
+        "text": "To serve among the Adeptus Astartes First Company Terminators, the Emperor’s finest.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "To walk the path of the Striking Scorpions, silent hunters in the shadows.",
+        "category": "Eldar"
+      },
+      {
+        "text": "To join the Raptors of Chaos, sowing terror before the slaughter.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "To stand with the Cadian Shock Troops, unyielding against any foe.",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+
+  {
+    "id": 4,
+    "question": "You’ve been offered unlimited power, but at the cost of your identity.",
+    "options": [
+      {
+        "text": "If it makes me proppa choppy, who cares who I woz?",
+        "category": "Ork"
+      },
+      {
+        "text": "No. Honour and identity are sacred.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "There must be another way.",
+        "category": "Eldar"
+      },
+      {
+        "text": "Yes. I can remake myself into a God.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "Tempting, but I must remain loyal to the Emperor.",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "You’re losing a battle. What do you do?",
+    "options": [
+      {
+        "text": "Charge ‘arder! Go out in a proppa WAAAGH!",
+        "category": "Ork"
+      },
+      {
+        "text": "Rally the troops and hold the line. We shall not falter.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "Disengage and strike from the shadows later.",
+        "category": "Eldar"
+      },
+      {
+        "text": "Flee and sacrifice the remaining servants and cultists to cover you.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "We die standing",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Your superior gives you an order you disagree with. How do you proceed?",
+    "options": [
+      { "text": "Smash da boss in a proppa scrap!", "category": "Ork" },
+      {
+        "text": "If it does not dishonor the Chapter it shall be done",
+        "category": "Space Marine"
+      },
+      {
+        "text": "Follow the order, but modify it to suit your strategy.",
+        "category": "Eldar"
+      },
+      {
+        "text": "Obey for now. Sabotage them later.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "Sir Yessir!",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "You discover a dangerous relic. What do you do with it?",
+    "options": [
+      {
+        "text": "Use da shiny bitz straight away in a scrap!",
+        "category": "Ork"
+      },
+      {
+        "text": "Seal it away until approved by the High Council.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "Study its properties and replicate its power.",
+        "category": "Eldar"
+      },
+      {
+        "text": "Use it to manipulate your rivals.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "Blimey, what does the Commissar think of this?",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "question": "You are offered command of a battalion. What’s your leadership style?",
+    "options": [
+      {
+        "text": "Shout loud, stomp ‘ard, an’ bash from da front!",
+        "category": "Ork"
+      },
+      {
+        "text": "Command with honour, discipline, and the Codex Astartes.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "Precise, calculated, and guided by foresight.",
+        "category": "Eldar"
+      },
+      {
+        "text": "Rule through fear and sacrifice. Command chaos.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "They may not like me, but they will follow me.",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "What is your view on weakness?",
+    "options": [
+      { "text": "Weak gitz is fer stompin’!", "category": "Ork" },
+      {
+        "text": "It is a flaw to be corrected or purged.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "A predecessor to suffering.",
+        "category": "Eldar"
+      },
+      {
+        "text": "A mere tool. Exploit it to your advantage.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "Weakness gets yoou killed out here, by them or by the Commissar",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "question": "How do you react to betrayal from your commander?",
+    "options": [
+      {
+        "text": "Krump da boss an’ nick ‘is hat! If youz iz big enuf",
+        "category": "Ork"
+      },
+      {
+        "text": "Expose them and restore honour through justice.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "Manipulate the situation to your advantage.",
+        "category": "Eldar"
+      },
+      {
+        "text": "Commend their ambition. Then eliminate them yourself.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "The Chain of Command must know. The Guard does not forgive betrayal.",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "question": "What is your philosophy on war?",
+    "options": [
+      { "text": "Orkz is made fer fightin’ an’ winnin’!", "category": "Ork" },
+      {
+        "text": "War is a sacred duty in service of the Emperor.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "War is a tragic necessity — strike only when needed.",
+        "category": "Eldar"
+      },
+      { "text": "The Chaos Gods demand it!", "category": "Chaos Marine" },
+      {
+        "text": "War is survival. We fight, we die, and another regiment takes our place",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "question": "You capture a dangerous enemy soldier who has killed many of your comrades. What do you do?",
+    "options": [
+      {
+        "text": "Rip off ‘is arms an’ wave ‘em like banners!",
+        "category": "Ork"
+      },
+      {
+        "text": "Detain them for interrogation, then execution.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "Extract what you need and erase them without trace.",
+        "category": "Eldar"
+      },
+      {
+        "text": "Corrupt their mind and recruit them to our cause.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "March them before the Commissar. The Emperor’s justice will be done.",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "question": "You arrive on the battlefield and face a larger enemy force. What’s your approach?",
+    "options": [
+      {
+        "text": "Charge in shoutin’ WAAAGH! Da bloodier da betta!",
+        "category": "Ork"
+      },
+      {
+        "text": "Establish a frontline, coordinate squads, and execute a flanking manoeuvre with precision.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "Strike fast, disappear faster — distract and destroy before they know what hit them.",
+        "category": "Eldar"
+      },
+      {
+        "text": "Send in waves of expendable cultists to weaken their morale, then descend upon them in full fury.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "Hold the line. We are the wall, and the wall does not break.",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "question": "You are the last survivor of your squad, surrounded with no way out. What do you do?",
+    "options": [
+      {
+        "text": "WAAAGH! I’z not goin’ quiet — if I go, I’m takin’ da lot wiv me!",
+        "category": "Ork"
+      },
+      {
+        "text": "We shall know no fear. For the Emperor!",
+        "category": "Space Marine"
+      },
+      {
+        "text": "Even in death, I serve the will of the Craftworld.",
+        "category": "Eldar"
+      },
+      {
+        "text": "Blood for the Blood God! My death is just the beginning.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "The Guard never yields, ten thousand men will take my place.",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "question": "Which of these quotes resonates most with you?",
+    "options": [
+      { "text": "Red wunz go fasta!", "category": "Ork" },
+      {
+        "text": "It is better to die for the Emperor than to live for yourself.",
+        "category": "Space Marine"
+      },
+      { "text": "Even the stars fear our patience.", "category": "Eldar" },
+      { "text": "Sanity is for the weak.", "category": "Chaos Marine" },
+      { "text": "We die standing.", "category": "Imperial Guard" }
+    ]
+  },
+  {
+    "id": 16,
+    "question": "Your base has been infected by tyrannid swarms. You still have some of your troops inside but the situation appears hopeless. How do you proceed?",
+    "options": [
+      {
+        "text": "Go an'shoot 'em up wit da boyz!",
+        "category": "Ork"
+      },
+      {
+        "text": "Orbital bombardment - followed by a ground assault. The horde must be purged",
+        "category": "Space Marine"
+      },
+      {
+        "text": "We withdraw and strike from afar.",
+        "category": "Eldar"
+      },
+      {
+        "text": "Burn the entire place to the ground. No one can escape the wrath of Chaos.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "Every man for himself. The regiment will survive.",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "question": "A wounded ally begs you not to leave them behind.",
+    "options": [
+      {
+        "text": "If dey can’t walk, dey’z just dead weight.",
+        "category": "Ork"
+      },
+      {
+        "text": "If I can save them, I will. But the mission comes first.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "One death now may save many later. I move on.",
+        "category": "Eldar"
+      },
+      {
+        "text": "They beg? Good. I feed on their despair.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "If I can’t carry them, I grant them mercy and keep fighting.",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "question": "Your forces are demoralised. What’s your rallying cry?",
+    "options": [
+      { "text": "WAAAGH!! Gitz! Get back in da scrap!", "category": "Ork" },
+      {
+        "text": "We are the Emperor’s wrath! We shall know no fear!",
+        "category": "Space Marine"
+      },
+      { "text": "The skein of fate favours us today.", "category": "Eldar" },
+      {
+        "text": "Blood for the Blood God! Skulls for the Skull Throne!",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "Stand your ground! The Emperor will judge cowards, but I will shoot them first!",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "question": "You’ve been captured by the enemy. How do you respond?",
+    "options": [
+      {
+        "text": "I’z gettin’ outta ‘ere, one way or anudder!",
+        "category": "Ork"
+      },
+      {
+        "text": "I will never betray the Emperor. I await rescue or death.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "I will bide my time and strike when the moment is right.",
+        "category": "Eldar"
+      },
+      {
+        "text": "I will corrupt my captors and turn them against each other.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "Duty only ends in death.",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+
+  {
+    "id": 20,
+    "question": "Who is your most mortal enemy?",
+    "options": [
+      {
+        "text": "Da biggest, meanest gitz I can find...humies, spikey boyz, all of ‘em! I’z fightin’ anyone wot gives me a scrap!",
+        "category": "Ork"
+      },
+      {
+        "text": "The heretic and the alien must be destroyed.",
+        "category": "Space Marine"
+      },
+      {
+        "text": "The clumsy mon-keigh, whose ignorance tears the galaxy apart.",
+        "category": "Eldar"
+      },
+      {
+        "text": "The False Emperor and his lapdogs skulls belong to the Dark Gods.",
+        "category": "Chaos Marine"
+      },
+      {
+        "text": "The xenos and the traitor. We may be only men, but we’ll never yield to them.",
+        "category": "Imperial Guard"
+      }
+    ]
+  },
+
+  [
+    {
+      "id": 21,
+      "question": "How do you feel about the Space Marines?",
+      "options": [
+        {
+          "text": "Blind zealots clinging to a dead god.",
+          "category": "Chaos Marine"
+        },
+        {
+          "text": "Noble warriors and the finest of mankind.",
+          "category": "Space Marine"
+        },
+        {
+          "text": "They are inflexible, predictable — easily outmanoeuvred.",
+          "category": "Eldar"
+        },
+        {
+          "text": "Big ladz, but dey take fings' too serious.",
+          "category": "Ork"
+        },
+        {
+          "text": "Angels of the Imperium. I hope to die beside one.",
+          "category": "Imperial Guard"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "question": "How do you feel about the Chaos Marines?",
+      "options": [
+        {
+          "text": "Traitorous filth. They deserve only death.",
+          "category": "Space Marine"
+        },
+        {
+          "text": "They’ve embraced truth. Power matters more than loyalty.",
+          "category": "Chaos Marine"
+        },
+        {
+          "text": "Their chaos weakens the galaxy. They are reckless children.",
+          "category": "Eldar"
+        },
+        { "text": "Dey’s loud an’ smashy. I like dat!", "category": "Ork" },
+        {
+          "text": "I fear them. But I fight anyway.",
+          "category": "Imperial Guard"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "question": "How do you feel about the Orks?",
+      "options": [
+        {
+          "text": "The Green Tide is a formmiddable scourge upon the galaxy.",
+          "category": "Space Marine"
+        },
+        {
+          "text": "Their unsettling love for battle makes them the true winners of this war",
+          "category": "Eldar"
+        },
+        { "text": "We’z born fer fightin’ — nuff said!", "category": "Ork" },
+        {
+          "text": "Stupid beasts. Easy to corrupt or manipulate.",
+          "category": "Chaos Marine"
+        },
+        {
+          "text": "Their smell is the worst part",
+          "category": "Imperial Guard"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "question": "How do you feel about the Eldar?",
+      "options": [
+        {
+          "text": "Sneaky gitz hidin’ behind shiny trickz.",
+          "category": "Ork"
+        },
+        {
+          "text": "An untrustworthy ally, and an tricky foe.",
+          "category": "Space Marine"
+        },
+        {
+          "text": "Ancient, wise, and burdened with knowledge.",
+          "category": "Eldar"
+        },
+        {
+          "text": "Even the Dark Gods envy their power.",
+          "category": "Chaos Marine"
+        },
+        {
+          "text": "They saved a regiment once. We never saw them again.",
+          "category": "Imperial Guard"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "question": "How do you feel about the Imperial Guard?",
+      "options": [
+        {
+          "text": "Pathetic meat-shields with a life expectancy of minutes.",
+          "category": "Chaos Marine"
+        },
+        {
+          "text": "The backbone of the Imperium. Honour them.",
+          "category": "Space Marine"
+        },
+        {
+          "text": "Cannon fodder. Predictable, breakable.",
+          "category": "Eldar"
+        },
+        {
+          "text": "Deyz soft as squig, an’ slow as grots, but dey keep comin’",
+          "category": "Ork"
+        },
+        {
+          "text": "We are not the finest soldiers of the Imperium, but we are the ones who endure",
+          "category": "Imperial Guard"
+        }
+      ]
+    }
+  ]
+]
