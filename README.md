@@ -19,7 +19,7 @@ A fun, interactive CLI quiz that determines which Warhammer 40K faction you alig
 
 ## Setup
 
-- Install **Git**
+- Install **Git** https://git-scm.com/downloads
 - Install **Node.js** (includes npm): [https://nodejs.org/](https://nodejs.org/)
 - Open command line or Powershell window
 - Clone the repository:  
