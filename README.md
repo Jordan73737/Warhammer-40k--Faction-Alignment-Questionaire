@@ -9,6 +9,7 @@ A fun, interactive CLI quiz that determines which Warhammer 40K faction you alig
 - Faction-based scoring
 - Results summary with percentages and a quote
 - Option to replay and saves results to `result.txt`
+- Exit function
 
 ## Requirements
 

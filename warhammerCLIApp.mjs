@@ -1,16 +1,13 @@
-// warhammerCliApp.js
+// & warhammerCliApp.js &
 
 import fs from "fs";
 import readline from "readline";
 import chalk from "chalk";
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
+// & load in the questions from the JSON file &
 const questions = JSON.parse(fs.readFileSync("./warhammer_questions.json"));
 
+// & keep track of scores for each faction &
 let scores = {
   Ork: 0,
   "Space Marine": 0,
@@ -19,10 +16,52 @@ let scores = {
   "Imperial Guard": 0,
 };
 
-let current = 0;
-let lastInvalid = false; // Track if previous input was invalid
+let rl; // & readline will only be created after the intro finishes
+let current = 0; // & index of the current question
+let lastInvalid = false; // & track if the last input was invalid so we don’t reprint the question
 
-// Function to animate/slowly type out the intro message
+// & dummy function (noop) used to swallow input during the intro &
+const swallowInput = () => {};
+
+let escKeyHandler = null;
+
+function cleanupAndExit() {
+  try {
+    process.stdin.removeListener("data", swallowInput);
+  } catch {}
+  try {
+    if (escKeyHandler) process.stdin.removeListener("data", escKeyHandler);
+  } catch {}
+  try {
+    if (process.stdin.isTTY) process.stdin.setRawMode(false);
+  } catch {}
+  try {
+    rl && rl.close();
+  } catch {}
+  try {
+    process.stdin.pause();
+  } catch {}
+  process.exit(0);
+}
+
+// & lock input so typing during intro doesn’t interfere &
+function lockInput() {
+  try {
+    if (process.stdin.isTTY) process.stdin.setRawMode(true);
+  } catch {}
+  process.stdin.resume();
+  process.stdin.on("data", swallowInput);
+}
+
+// & unlock input once the intro is done &
+function unlockInput() {
+  process.stdin.removeListener("data", swallowInput);
+  try {
+    if (process.stdin.isTTY) process.stdin.setRawMode(false);
+  } catch {}
+}
+
+// & slowly types out a string a character at a time &
 async function typeOut(text, delay = 35) {
   for (const char of text) {
     process.stdout.write(char);
@@ -31,19 +70,43 @@ async function typeOut(text, delay = 35) {
   process.stdout.write("\n");
 }
 
-// Animated intro message
+// & prints the animated intro message, then sets up readline and starts quiz &
 async function showIntro() {
   const intro =
     "\nThis is the Dawn of War\n" +
     "Your dog in this fight will be determined by your answers to the following 25 questions\n" +
-    "Choose carefully - for fighting on a side you do not belong to will result in a terrible misery.\n\n";
-  await typeOut(chalk.bold.yellow(intro), 35);
+    "Choose wisely, for taking up arms with the wrong side may lead to a fate worse than death\n\n";
+
+  lockInput(); // & lock keyboard while text prints
+  await typeOut(chalk.bold.yellow(intro), 20);
+  unlockInput(); // & allow keyboard again
+
+  console.log(chalk.gray("Press Esc to exit")); // & let user know Esc can quit
+
+  // & create readline now so nothing typed earlier goes in
+  rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
+  // & listen for Esc key to exit gracefully
+  process.stdin.setRawMode(true);
+  process.stdin.resume();
+  escKeyHandler = (key) => {
+    if (key && key.toString() === "\u001b") {
+      console.log(chalk.red("\nExiting questionnaire..."));
+      cleanupAndExit();
+    }
+  };
+  process.stdin.on("data", escKeyHandler);
+  askQuestion();
 }
 
+// & handles asking the current question &
 function askQuestion() {
   const q = questions[current];
 
-  // Only print the question if the last input was not invalid
+  // & only show the question again if last input wasn’t invalid &
   if (!lastInvalid) {
     console.log(`\n${chalk.yellow(`Q${q.id}: ${q.question}`)}`);
     q.options.forEach((opt, i) => {
@@ -51,44 +114,48 @@ function askQuestion() {
     });
   }
 
-  rl.question(chalk.green("\nYour answer (1-4): "), (answer) => {
-    const choice = parseInt(answer);
+  rl.question(
+    chalk.green(`\nYour answer (1-${q.options.length}): `),
+    (answer) => {
+      const choice = parseInt(answer, 10);
 
-    if (choice >= 1 && choice <= 5) {
-      const selected = q.options[choice - 1];
-      scores[selected.category]++;
-      // Highlight the selected option briefly before moving to the next
-      console.log(
-        chalk.bgGreen.black(`\nYou selected: ${choice}. ${selected.text}`)
-      );
-      lastInvalid = false;
+      if (choice >= 1 && choice <= q.options.length) {
+        const selected = q.options[choice - 1];
+        scores[selected.category]++;
+        console.log(
+          chalk.bgGreen.black(`\nYou selected: ${choice}. ${selected.text}`)
+        );
+        lastInvalid = false;
 
-      // Wait 1 second before moving to the next question or results
-      setTimeout(() => {
-        current++;
-        if (current < questions.length) {
-          askQuestion();
-        } else {
-          showResults();
-        }
-      }, 1500);
-    } else {
-      lastInvalid = true;
-      console.log(chalk.red("Invalid choice. Please select 1–4."));
-      askQuestion();
+        // & move to the next question after a short pause &
+        setTimeout(() => {
+          current++;
+          if (current < questions.length) {
+            askQuestion();
+          } else {
+            showResults();
+          }
+        }, 1000);
+      } else {
+        // & if invalid, don’t reprint the question, just show error &
+        lastInvalid = true;
+        console.log(
+          chalk.red(`Invalid choice. Please select 1–${q.options.length}.`)
+        );
+        askQuestion();
+      }
     }
-  });
+  );
 }
 
+// & show the final results at the end of the quiz &
 function showResults() {
   const quotes = {
     "Space Marine": "Burn the Heretic. Kill the Mutant. Purge the Unclean!",
-    "Chaos Marine":
-      "The memories they consume us! I feel the nostalgia overtaking me...it is a good pain!",
+    "Chaos Marine": "Let the galaxy burn.",
     Eldar: "We see the strands of fate. You merely stumble through them.",
     Ork: "WAAAGH!",
-    "Imperial Guard":
-      "For everyone of us who falls, ten more shall take his place!",
+    "Imperial Guard": "Only in death does duty end.",
   };
 
   console.log("\n\n==============================");
@@ -97,8 +164,9 @@ function showResults() {
   const total = Object.values(scores).reduce((a, b) => a + b, 0);
   let resultText = "";
 
+  // & loop over each faction and show percentages
   Object.entries(scores).forEach(([faction, value]) => {
-    const percent = Math.round((value / total) * 100);
+    const percent = total ? Math.round((value / total) * 100) : 0;
     const bar = chalk
       .magenta("|")
       .repeat(percent / 2)
@@ -107,6 +175,7 @@ function showResults() {
     resultText += `${faction}: ${percent}%\n`;
   });
 
+  // & find the faction with the highest score &
   const dominant = Object.entries(scores).reduce((a, b) =>
     a[1] > b[1] ? a : b
   )[0];
@@ -116,14 +185,15 @@ function showResults() {
       dominant
     )}!`
   );
+  console.log(chalk.gray(`"${quotes[dominant]}"`));
   console.log("==============================\n");
 
+  // & save results to file
   resultText += `You align most with: ${dominant}\n`;
-  console.log(chalk.gray(`"${quotes[dominant]}"`));
-
   fs.writeFileSync("result.txt", resultText);
   console.log(chalk.gray("Results saved to result.txt"));
 
+  // & option to restart the quiz &
   rl.question(
     chalk.blue("\nWould you like to play again? (y/n): "),
     (answer) => {
@@ -133,16 +203,17 @@ function showResults() {
           "Space Marine": 0,
           Eldar: 0,
           "Chaos Marine": 0,
+          "Imperial Guard": 0,
         };
         current = 0;
         lastInvalid = false;
         askQuestion();
       } else {
         console.log(chalk.gray("Goodbye."));
-        rl.close();
+        cleanupAndExit();
       }
     }
   );
 }
 
-showIntro().then(askQuestion);
+showIntro();

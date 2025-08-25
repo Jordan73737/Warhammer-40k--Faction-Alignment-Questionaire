@@ -77,10 +77,10 @@
 
   {
     "id": 4,
-    "question": "You’ve been offered unlimited power, but at the cost of your identity.",
+    "question": "You’ve been offered unlimited power, but at the cost of your identity. Do you take it?",
     "options": [
       {
-        "text": "If it makes me proppa choppy, who cares who I woz?",
+        "text": "If it makes me proppa choppyr, den yeah!",
         "category": "Ork"
       },
       {
@@ -391,7 +391,7 @@
   },
   {
     "id": 17,
-    "question": "A wounded ally begs you not to leave them behind.",
+    "question": "A wounded ally begs you not to leave them behind. What do you do?",
     "options": [
       {
         "text": "If dey can’t walk, dey’z just dead weight.",
