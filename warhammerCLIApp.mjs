@@ -1,4 +1,4 @@
-// & warhammerCliApp.js &
+// & warhammerCliApp.js
 
 import fs from "fs";
 import readline from "readline";
@@ -195,7 +195,7 @@ function showResults() {
 
   // & option to restart the quiz
   rl.question(
-    chalk.blue("\nWould you like to retake the questionaire? (y/n): "),
+    chalk.blue("\nWould you like to retake the questionnaire? (y/n): "),
     (answer) => {
       if (answer.toLowerCase() === "y") {
         scores = {
