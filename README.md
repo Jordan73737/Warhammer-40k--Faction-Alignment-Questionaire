@@ -1,6 +1,6 @@
 # Warhammer 40K CLI Alignment Quiz
 
-A fun, interactive CLI quiz that determines which Warhammer 40K faction you align with based on your answers to 25 themed questions.
+A fun, interactive CLI quiz that determines which Warhammer 40K faction you align with based on your answers to 25 questions.
 
 ## Features
 
